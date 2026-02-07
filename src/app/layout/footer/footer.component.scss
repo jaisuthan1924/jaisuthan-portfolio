@@ -1,0 +1,51 @@
+.footer {
+  background: #0b1c24;
+  color: #ccc;
+  padding: 25px 20px;
+  text-align: center;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.footer-content p {
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.footer-content span {
+  color: #00e5ff;
+  font-weight: 500;
+}
+
+.socials {
+  display: flex;
+  gap: 18px;
+}
+
+.socials a {
+  color: #ccc;
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+}
+
+.socials a:hover {
+  transform: translateY(-4px);
+}
+
+/* Brand hover colors */
+.socials a:hover .fa-linkedin-in {
+  color: #0a66c2;
+}
+
+.socials a:hover .fa-youtube {
+  color: #ff0000;
+}
+
+.socials a:hover .fa-envelope {
+  color: #ffd369;
+}

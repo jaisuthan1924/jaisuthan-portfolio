@@ -1,11 +1,78 @@
 .navbar {
-  display: flex;
-  justify-content: space-between;
-  padding: 16px 40px;
-  background: #020617;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(15, 32, 39, 0.85);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
 }
-ul {
+
+.nav-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 14px 24px;
   display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #00e5ff;
+  cursor: pointer;
+  letter-spacing: 1px;
+}
+
+.nav-links {
   list-style: none;
-  gap: 24px;
+  display: flex;
+  gap: 28px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #ddd;
+  font-size: 1rem;
+  position: relative;
+  padding-bottom: 4px;
+  transition: color 0.3s ease;
+}
+
+/* Hover underline animation */
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 2px;
+  background: #00e5ff;
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #fff;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+/* Active route */
+.nav-links a.active {
+  color: #00e5ff;
+}
+
+.nav-links a.active::after {
+  width: 100%;
+}
+
+/* Mobile ready (optional for later) */
+@media (max-width: 768px) {
+  .nav-links {
+    gap: 16px;
+  }
 }
